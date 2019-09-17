@@ -44,9 +44,11 @@ body {
     position: relative;
 	flex-direction: column;
 	background: linear-gradient(270deg, black, rgba(0, 0, 0, 0.753), rgba(0, 0, 0, 0.013));
+	margin-bottom: 10%;
+	
 }
 #image-banner{
-	height: 100%;
+	height: auto;
 	width: 60%;
 	background: rgba(0, 0, 0, 0);
 	display: flex;
@@ -54,16 +56,19 @@ body {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
 }
 .form-cards{
-    position: relative;
-    min-width: 300px;
+	position: relative;
+    min-width: 400px;
     min-height: 380px;
     transform-style: preserve-3d;
     transform: rotateY(0);
 	transition: transform .3s linear, opacity .3s linear;
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
 			0 10px 10px rgba(0,0,0,0.22);
+	
+	
 }
 
 .flip{
@@ -88,7 +93,9 @@ body {
 	border: 1px solid;
 	transition: background .3s linear, color .3s linear, border .3s linear;
 }
-
+#sign-up-btn{
+	margin-top: 5%;
+}
 #front{
 	backface-visibility: hidden;
 	position: absolute;
@@ -140,6 +147,7 @@ button {
 	letter-spacing: 1px;
 	text-transform: uppercase;
 	transition: transform 80ms ease-in;
+	margin-bottom: 7%;
 }
 
 button:active {
@@ -155,10 +163,11 @@ form {
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	padding: 0 50px;
+	padding:0 30px;
 	height: 500px;
 	text-align: center;
 	border-radius: 10px;
+	width: 100%;
 }
 
 input {
@@ -166,8 +175,14 @@ input {
 	border: none;
 	padding: 12px 15px;
 	margin: 8px 0;
-	width: 100%;
+	width: 300px;
+	border-radius: 0.5em;
 }
+
+input[placeholder] {
+	font-family: "Century Gothic", sans-serif;
+	font-size: 1em;
+  }
 
 .social-container {
 	margin: 20px 0;
@@ -194,9 +209,11 @@ footer {
 text-align: center;
 background: rgb(209, 207, 207);
 height: 5vh;
+width: 100%;
 position: absolute;
 bottom: 0;
-width: 100vw;
+font-size: 1em;
+padding-top: 1vh;
 } 
 
 /* iPads (portrait and landscape) ----------- */
@@ -222,11 +239,12 @@ width: 100vw;
 /* rgba(152, 47, 40, 0) */
 
 	#wrapper{
-		width: 45%;
-		background: linear-gradient(270deg,rgba(0, 0, 0, 0.884),rgba(0, 0, 0, 0.712), rgba(5, 0, 0, 0.014))
+		width: 50%;
+		background: linear-gradient(270deg,rgba(0, 0, 0, 0.884),rgba(0, 0, 0, 0.712), rgba(5, 0, 0, 0.014));
+		margin-bottom: 10%;
 	}
 	#image-banner{
-		width: 55%;
+		width: 50%;
 		background: rgba(0, 0, 0, 0);
 	display: flex;
 	color: white;
@@ -234,6 +252,17 @@ width: 100vw;
 	justify-content: center;
 	align-items: center;
 	}
+	footer {
+		color: #791605e0;
+	text-align: center;
+	background: rgb(209, 207, 207);
+	height: 5vh;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	font-size: 1em;
+	padding-top: 1vh;
+	} 
 }	
 	/* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width : 100px) and (max-width : 768px) {
@@ -261,6 +290,7 @@ width: 100vw;
 		background: rgba(0, 0, 0, 0);
 		height: 75vh;
 		width: 100vw;
+		margin-bottom: 10%;
 	}
 	#logo-header h1{
 		font-size: 60px;
@@ -277,4 +307,15 @@ width: 100vw;
 		margin-left: 90px;
 		font-size: 13px;
 	}
+	footer {
+		color: #791605e0;
+	text-align: center;
+	background: rgb(209, 207, 207);
+	height: 5vh;
+	width: 100%;
+	position: absolute;
+	bottom: 0;
+	font-size: 1em;
+	padding-top: 1vh;
+	} 
 }
