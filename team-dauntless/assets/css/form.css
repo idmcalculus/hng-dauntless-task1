@@ -16,6 +16,8 @@ body {
 	display: flex;
 	font-family: 'Montserrat', sans-serif;
 	height: 100vh;
+	width:100vw;
+	overflow:hidden;
 }
 #logo-header{
 	display: flex;
@@ -266,6 +268,8 @@ padding-top: 1vh;
 }	
 	/* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-width : 100px) and (max-width : 768px) {
+	form{
+		height:400px;
 	body{
 		display: block;
 		background-image: url(../img/image.png);
