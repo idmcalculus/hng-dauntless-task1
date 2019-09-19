@@ -1,13 +1,17 @@
-<?php session_start(); /* Starts the session */
+<?php 
+  session_start(); 
 
-if(!isset($_SESSION['UserData']['Username'])){
-	header("location:login.php");
-	exit;
-}
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+  }
+  if (isset($_GET['logout'])) {
+  	session_destroy();
+  	unset($_SESSION['username']);
+  	header("location: login.php");
+  }
 ?>
 
-<section style="background: green; color:white;font-size:30px;font-weight:300;text-align:center;">Login was succesful.<br> 
-<a style="color:red;font-weight:400;" href="logout.php">Click here</a> to Logout.</section>
 
 
 
@@ -24,27 +28,31 @@ if(!isset($_SESSION['UserData']['Username'])){
     <link rel="stylesheet" href="./assets/css/404.css">
 </head>
 <body>
-<section class="page_404">
-	<div class="container">
-		<div class="row">	
-		<div class="col-sm-12 ">
-		<div class="col-sm-10 col-sm-offset-1  text-center">
-		<div class="four_zero_four_bg">
-			<h1 class="text-center ">404</h1>
-		</div>
-		<div class="contant_box_404">
-		<h3 class="h2">
-		Looks like you're lost!
-		</h3>
-		
-        <p>The page you are looking for not available!</p>
-        <small>THIS IS A TEST WEBSITE AND YOUR SUBMISSION WILL NOT BE PROCESSED</small>
-    	</div>
-		</div>
-		</div>
-		</div>
-    </div>
-</section>
+<div class="content">
+  	<!-- notification message -->
+  	<?php if (isset($_SESSION['success'])) : ?>
+      <div class="error success" >
+      	<h3>
+          <?php 
+          	echo $_SESSION['success']; 
+          	unset($_SESSION['success']);
+          ?>
+      	</h3>
+      </div>
+  	<?php endif ?>
+     
+
+
+    <!-- logged in user information -->
+    <?php  if (isset($_SESSION['username'])) : ?>
+    <section style="background: green; color:white;font-size:30px;font-weight:300;text-align:center;">Login was succesful.<br>
+    Your username is: <p><strong><?php echo $_SESSION['username']; ?></strong></p>
+    
+    <a style="color:red;font-weight:400;" href="index.php?logout='1'">Click here</a> to Logout.</section>
+
+    	
+    <?php endif ?>
+</div>
 
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/boots">
 </body>
