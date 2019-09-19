@@ -1,0 +1,290 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-image: url(../img/image.png);
+	background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: rgba(5, 0, 0, 0.418);
+		background-blend-mode: darken;
+	display: flex;
+	font-family: 'Montserrat', sans-serif;
+	height: 100vh;
+}
+.error{
+	position: absolute;
+	top: 0;
+	width: 100vw;
+	text-align: center;
+	background: red;
+	color: white;
+	font-size: 30px;
+	font-weight: 300;
+}
+#logo-header{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#logo-header h1{
+	margin-left: 5px;
+}
+#logo-header h1{
+	font-size: 5em;
+	font-weight: 200;
+	color: yellow;
+	margin-bottom: -5px;
+}
+#logo-header img{
+	width: 60px;
+	margin-top: 6px;
+}
+
+#wrapper{
+	width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+	flex-direction: column;
+	background: linear-gradient(270deg, black, rgba(0, 0, 0, 0.753), rgba(0, 0, 0, 0.013));
+}
+#image-banner{
+	height: 100%;
+	width: 60%;
+	background: rgba(0, 0, 0, 0);
+	display: flex;
+	color: white;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.form-cards{
+    position: relative;
+    min-width: 300px;
+    min-height: 380px;
+    transform-style: preserve-3d;
+    transform: rotateY(0);
+	transition: transform .3s linear, opacity .3s linear;
+	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
+			0 10px 10px rgba(0,0,0,0.22);
+}
+
+.flip{
+    transform: rotateY(180deg);
+    transition: transform .3s linear, opacity .3s linear;
+}
+.signing{
+	margin-top:10px;
+}
+.sign-in,
+.sign-up{
+	background: rgb(175, 12, 12);
+	padding: 3px;
+	color: rgb(255, 255, 255);
+	cursor: pointer;
+	border: 1px solid;
+}
+.sign-in:hover,
+.sign-up:hover{
+	background: rgba(255, 251, 251, 0.507);
+	color: black;
+	border: 1px solid;
+	transition: background .3s linear, color .3s linear, border .3s linear;
+}
+
+#front{
+	backface-visibility: hidden;
+	position: absolute;
+	top: 0;
+}
+#back{
+	transform: rotateY(180deg);
+	display: none;
+	position: absolute;
+	top: 0;
+}
+
+h1 {
+	font-weight: bold;
+	margin: 0;
+}
+
+h2 {
+	text-align: center;
+}
+
+p {
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 20px 0 30px;
+}
+
+span {
+	font-size: 12px;
+}
+
+a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+button {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 10px 40px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+form {
+	background-color: rgb(255, 255, 255);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 390px;
+	text-align: center;
+	border-radius: 10px;
+}
+
+input {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
+.social-container {
+	margin: 20px 0;
+}
+
+.social-container a {
+	border: 1px solid #DDDDDD;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
+}
+.social-container a:hover{
+	background: rgb(235, 23, 23);
+	color: white;
+	transition: background .3s linear;
+}
+
+footer {
+    color: #791605e0;
+text-align: center;
+background: rgb(209, 207, 207);
+height: 5vh;
+position: absolute;
+bottom: 0;
+width: 100vw;
+} 
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+	body{
+		background-image: url(../img/image.png);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: rgba(5, 0, 0, 0.418);
+		background-blend-mode: darken;
+	}
+#logo-header h1{
+	font-size: 60px;
+	font-weight: 200;
+	color: yellow;
+	margin-bottom: -5px;
+}
+#logo-header img{
+	width: 45px;
+	margin-top: 6px;
+}
+/* rgba(152, 47, 40, 0) */
+
+	#wrapper{
+		width: 45%;
+		background: linear-gradient(270deg,rgba(0, 0, 0, 0.884),rgba(0, 0, 0, 0.712), rgba(5, 0, 0, 0.014))
+	}
+	#image-banner{
+		width: 55%;
+		background: rgba(0, 0, 0, 0);
+	display: flex;
+	color: white;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	}
+}	
+	/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 100px) and (max-width : 768px) {
+	body{
+		display: block;
+		background-image: url(../img/image.png);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-color: rgba(5, 0, 0, 0.445);
+		background-blend-mode: darken;
+	}
+	
+	#image-banner{
+		background: linear-gradient(360deg, rgba(58, 45, 45, 0.705),rgb(0, 0, 0));
+		color: white;
+		width: 100vw;
+		height: 20vh;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	#wrapper{
+		background: rgba(0, 0, 0, 0);
+		height: 75vh;
+		width: 100vw;
+	}
+	#logo-header h1{
+		font-size: 60px;
+		font-weight: 200;
+		color: yellow;
+		margin-bottom: -10px;
+	}
+	#logo-header img{
+		width: 40px;
+		margin-top: 12px;
+	}
+	#image-banner em{
+		color: rgb(236, 229, 229);
+		margin-left: 90px;
+		font-size: 13px;
+	}
+}
