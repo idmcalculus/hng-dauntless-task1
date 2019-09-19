@@ -3,6 +3,9 @@ A simple login page
 
 ## About this Project
 This is a team project for Team Dauntless. It's still very much in development stage. The project proposal will be available soon.
+## Use these hardcoded login details to test the sign-in feature. The sign-up feature is currently not functional. Test the user validation by using made up login details
+
+USERNAME: username1, username2. PASSWORD: password1, password2.
 
 ## How to Contribute to this Projects
 Please to contribute to this project you must strictly adhere to the following rules:
